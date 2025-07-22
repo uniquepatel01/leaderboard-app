@@ -12,17 +12,17 @@ function AddUser({ onUserAdded }) {
   };
 
   return (
-    <div className="mb-6">
+    <div className="mb-6 flex flex-col md:flex-row items-center gap-4">
       <input
         type="text"
         placeholder="Enter user name"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        className="p-2 rounded border border-gray-300 mr-2"
+        className="p-2 rounded border border-gray-300 w-full md:w-auto"
       />
       <button
         onClick={handleAdd}
-        className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+        className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full md:w-auto"
       >
         Add User
       </button>

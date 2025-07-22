@@ -4,8 +4,8 @@ function Leaderboard({ leaderboard }) {
   return (
     <div className="mt-8">
       <h2 className="text-2xl font-bold mb-4">Leaderboard</h2>
-      <div className="max-w-md mx-auto bg-white shadow rounded">
-        <table className="w-full text-left">
+      <div className="max-w-2xl mx-auto overflow-x-auto">
+        <table className="w-full text-left bg-white shadow rounded">
           <thead className="bg-gray-200">
             <tr>
               <th className="p-2">Rank</th>
