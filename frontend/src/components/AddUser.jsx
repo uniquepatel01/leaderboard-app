@@ -6,7 +6,7 @@ function AddUser({ onUserAdded }) {
 
   const handleAdd = async () => {
     if (!name) return;
-    await axios.post('http://localhost:5000/api/users', { name });
+    await axios.post('https://leaderboard-app-si6t.onrender.com/api/users', { name });
     setName('');
     onUserAdded();
   };

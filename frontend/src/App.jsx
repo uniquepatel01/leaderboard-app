@@ -12,19 +12,21 @@ function App() {
   const [leaderboard, setLeaderboard] = useState([]);
   const [claimedPoints, setClaimedPoints] = useState(null);
 
+  const API_BASE = 'https://leaderboard-app-si6t.onrender.com/api';
+
   const fetchUsers = async () => {
-    const res = await axios.get('http://localhost:5000/api/users');
+    const res = await axios.get(`${API_BASE}/users`);
     setUsers(res.data);
   };
 
   const fetchLeaderboard = async () => {
-    const res = await axios.get('http://localhost:5000/api/leaderboard');
+    const res = await axios.get(`${API_BASE}/leaderboard`);
     setLeaderboard(res.data);
   };
 
   const handleClaim = async () => {
     if (!selectedUserId) return alert('Select a user first!');
-    const res = await axios.post('http://localhost:5000/api/claim', {
+    const res = await axios.post(`${API_BASE}/claim`, {
       userId: selectedUserId,
     });
     setClaimedPoints(res.data.points);
